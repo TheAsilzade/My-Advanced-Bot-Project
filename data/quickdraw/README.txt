@@ -1,0 +1,1 @@
+py -3.14 build_quickdraw_cache.py --raw-dir data/quickdraw_raw --output data/quickdraw_cache.json --max-examples 5

@@ -1,0 +1,13 @@
+services:
+  raizel:
+    build: .
+    network_mode: "host" # Enables IPv6 (on Linux) and better performance
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - ./music_files:/app/music_files
+      # Persist cookies if they exist
+      - ./cogs/cookies.txt:/app/cogs/cookies.txt
+      # Persist AI chat history
+      - ./cogs/chat_context.json:/app/cogs/chat_context.json
